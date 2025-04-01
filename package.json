@@ -22,7 +22,8 @@
     "tape": "5.6.1"
   },
   "scripts": {
-    "serve": "live-server"
+    "serve": "live-server",
+    "test": "./tests.js"
   },
   "files": ["sfxr.js", "riffwave.js", "UNLICENSE", "README.md", "sfxr-to-wav"],
   "bin": {"sfxr-to-wav": "./sfxr-to-wav"}
