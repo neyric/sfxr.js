@@ -292,6 +292,43 @@ body {
   border-color: #F58400;
 }
 
+button[onclick*="play"] {
+  border: 1px solid #4caf50;
+  background: #45a049 url(jquery/images/ui-bg_gloss-wave_25_333333_500x100.png) 50% 50% repeat-x;
+  background-color: #45a049;
+  font-weight: bold;
+  color: #ffffff;
+  position: relative;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+button[onclick*="play"]:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(69, 160, 73, 0.6);
+  pointer-events: none;
+  z-index: 0;
+}
+
+button[onclick*="play"] span {
+  position: relative;
+  z-index: 1;
+}
+
+button[onclick*="play"]:hover {
+  border: 1px solid #5cbf60;
+  background: #4caf50 url(jquery/images/ui-bg_gloss-wave_25_333333_500x100.png) 50% 50% repeat-x;
+  background-color: #4caf50;
+}
+
+button[onclick*="play"]:hover:before {
+  background-color: rgba(76, 175, 80, 0.6);
+}
+
 * {
   font: 10pt Helvetica;
 }
