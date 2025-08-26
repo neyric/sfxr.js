@@ -1,7 +1,8 @@
 {
-  "name": "jsfxr",
-  "version": "1.2.2",
+  "name": "sfxr.js",
+  "version": "1.0.0",
   "description": "8-bit sound effects generator based on sfxr",
+  "author": "Neyric <neyric68@gmail.com>",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "exports": {
@@ -11,16 +12,16 @@
       "import": "./dist/index.mjs"
     }
   },
-  "homepage": "https://github.com/chr15m/jsfxr",
+  "homepage": "https://github.com/neyric/sfxr.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/chr15m/jsfxr.git",
-    "web": "https://github.com/chr15m/jsfxr"
+    "url": "https://github.com/neyric/sfxr.js.git",
+    "web": "https://github.com/neyric/sfxr.js"
   },
   "bugs": {
-    "url": "https://github.com/chr15m/jsfxr/issues/"
+    "url": "https://github.com/neyric/sfxr.js/issues/"
   },
-  "keywords": ["sfxr", "jsfxr", "8-bit", "sfx", "sound effects", "synth", "8bit", "retro", "chiptune", "audio", "music", "sound", "game development"],
+  "keywords": ["sfxr", "sfxr.js", "jsfxr", "8-bit", "sfx", "sound effects", "synth", "8bit", "retro", "chiptune", "audio", "music", "sound", "game development"],
   "devDependencies": {
     "@types/bun": "latest",
     "typescript": "^5.0.0"

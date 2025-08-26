@@ -1,6 +1,6 @@
-# JSFXR - 8-bit Sound Effects Generator
+# SFXR.JS - 8-bit Sound Effects Generator
 
-[![NPM Version](https://img.shields.io/npm/v/jsfxr.svg)](https://www.npmjs.com/package/jsfxr)
+[![NPM Version](https://img.shields.io/npm/v/sfxr.js.svg)](https://www.npmjs.com/package/sfxr.js)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.0+-blue.svg)](https://www.typescriptlang.org/)
 [![Build Status](https://img.shields.io/badge/build-passing-brightgreen.svg)]()
 [![License](https://img.shields.io/badge/license-Public%20Domain-brightgreen.svg)](./UNLICENSE)
@@ -23,17 +23,17 @@ A modern TypeScript port of the classic **sfxr** 8-bit sound effects generator. 
 ### Using npm/yarn/pnpm
 
 ```bash
-npm install jsfxr
+npm install sfxr.js
 # or
-yarn add jsfxr
+yarn add sfxr.js
 # or  
-pnpm add jsfxr
+pnpm add sfxr.js
 ```
 
 ### Using Bun
 
 ```bash
-bun add jsfxr
+bun add sfxr.js
 ```
 
 ## 🚀 Quick Start
@@ -41,7 +41,7 @@ bun add jsfxr
 ### Basic Usage
 
 ```typescript
-import { Params, SoundEffect } from 'jsfxr';
+import { Params, SoundEffect } from 'sfxr.js';
 
 // Generate a coin pickup sound
 const params = new Params();
@@ -59,7 +59,7 @@ audio.play();
 ### Available Presets
 
 ```typescript
-import { Params } from 'jsfxr';
+import { Params } from 'sfxr.js';
 
 const params = new Params();
 
@@ -78,7 +78,7 @@ params.tone();          // Pure tone (440Hz)
 ### Parameter Serialization
 
 ```typescript
-import { Params } from 'jsfxr';
+import { Params } from 'sfxr.js';
 
 const params = new Params();
 params.explosion();
@@ -102,7 +102,7 @@ newParams.fromJSON(JSON.parse(jsonData));
 ### Custom Sound Parameters
 
 ```typescript
-import { Params, SoundEffect, SQUARE, SINE } from 'jsfxr';
+import { Params, SoundEffect, SQUARE, SINE } from 'sfxr.js';
 
 const params = new Params();
 
@@ -149,7 +149,7 @@ The package includes a CLI tool for converting sound definitions to WAV files:
 ### Install CLI globally
 
 ```bash
-npm install -g jsfxr
+npm install -g sfxr.js
 ```
 
 ### CLI Usage
@@ -184,7 +184,7 @@ done
 
 ```html
 <script type="module">
-import { Params, SoundEffect } from './node_modules/jsfxr/dist/index.js';
+import { Params, SoundEffect } from './node_modules/sfxr.js/dist/index.js';
 
 const params = new Params();
 params.pickupCoin();
@@ -198,7 +198,7 @@ sound.getAudio().play();
 
 ```typescript
 // Works with Webpack, Vite, Rollup, etc.
-import { Params, SoundEffect } from 'jsfxr';
+import { Params, SoundEffect } from 'sfxr.js';
 
 document.getElementById('play-button').addEventListener('click', () => {
   const params = new Params();
@@ -219,8 +219,8 @@ document.getElementById('play-button').addEventListener('click', () => {
 ### Setup
 
 ```bash
-git clone https://github.com/your-username/jsfxr.git
-cd jsfxr
+git clone https://github.com/neyric/sfxr.js.git
+cd sfxr.js
 bun install
 ```
 
@@ -343,7 +343,7 @@ bun run build              # Verify build passes
 
 ## 📈 Performance
 
-JSFXR is optimized for both development and runtime performance:
+SFXR.JS is optimized for both development and runtime performance:
 
 - **Fast builds** with Bun (15ms typical build time)
 - **Zero-dependency runtime** (only dev dependencies)
