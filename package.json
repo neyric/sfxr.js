@@ -33,7 +33,8 @@
     "test": "bun test",
     "dev": "bun --watch src/index.ts",
     "typecheck": "tsc --noEmit",
-    "sfxr-to-wav": "bun run src/cli.ts"
+    "sfxr-to-wav": "bun run src/cli.ts",
+    "prepublishOnly": "bun run build"
   },
   "files": ["dist", "UNLICENSE", "README.md", "sfxr-to-wav"],
   "bin": {"sfxr-to-wav": "./sfxr-to-wav"}
