@@ -2,11 +2,15 @@
   "name": "jsfxr",
   "version": "1.2.2",
   "description": "8-bit sound effects generator based on sfxr",
-  "main": "sfxr.js",
-  "exports": [
-    "./sfxr.js",
-    "./riffwave.js"
-  ],
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs"
+    }
+  },
   "homepage": "https://github.com/chr15m/jsfxr",
   "repository": {
     "type": "git",
@@ -18,13 +22,18 @@
   },
   "keywords": ["sfxr", "jsfxr", "8-bit", "sfx", "sound effects", "synth", "8bit", "retro", "chiptune", "audio", "music", "sound", "game development"],
   "devDependencies": {
-    "live-server": "1.2.1",
-    "tape": "5.6.1"
+    "@types/bun": "latest",
+    "typescript": "^5.0.0"
   },
   "scripts": {
-    "serve": "live-server",
-    "test": "./tests.js"
+    "build": "tsc && bun build src/index.ts --outdir dist --target node --format esm --minify",
+    "build:cli": "bun build src/cli.ts --outfile dist/cli.js --target node --format esm",
+    "build:types": "tsc --emitDeclarationOnly",
+    "test": "bun test",
+    "dev": "bun --watch src/index.ts",
+    "typecheck": "tsc --noEmit",
+    "sfxr-to-wav": "bun run src/cli.ts"
   },
-  "files": ["sfxr.js", "riffwave.js", "UNLICENSE", "README.md", "sfxr-to-wav"],
+  "files": ["dist", "UNLICENSE", "README.md", "sfxr-to-wav"],
   "bin": {"sfxr-to-wav": "./sfxr-to-wav"}
 }
